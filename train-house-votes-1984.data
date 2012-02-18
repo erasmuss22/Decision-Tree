@@ -1,0 +1,155 @@
+// The structure of a dataset will be as described below.
+// (we're using a very restricted design for simplicity).
+
+// NOTE: Your code should handle both Windows-formatted and Linux-formatted files
+// (which, unfortunately, differ in how the end of line is represented).
+
+// The class labels (we assume, for simplicity, that only TWO values are possible).
+// Whether or not the person in question died on the Titanic
+survived
+died
+
+// The number of features:
+4
+
+// The names of the features (attributes describing the person aboard the
+// Titanic when it sank):
+type passenger crew
+accomodations regular luxury
+age adult child
+gender male female
+
+// The number of examples (will read this many in; ok to have more in the file)
+120
+
+// The examples (we assume, for simplicity, that all features are BOOLEAN-VALUED)
+//   First is the example's name, then its category, finally followed
+//   by the values of all of its features (listed in the order of the
+//   feature names above, will be separated by "whitespace"). 
+//   The (boring) names are simply used to concisely identify the examples.
+//   Your decision-tree learner should NOT use these names as a feature (what would happen if you did?).
+
+
+// You may assume that the feature values specified above are the only feature values that will appear.  
+// Ie, no need for error checking (but OK to do so).
+
+trainEx1	survived passenger regular adult female
+trainEx2	died     crew regular adult male
+trainEx3	survived crew regular adult male
+trainEx4	died     passenger luxury adult male
+trainEx5	survived passenger regular adult female
+trainEx6	died     passenger regular adult female
+trainEx7	survived passenger luxury adult female
+trainEx8	died     crew regular adult male
+trainEx9	survived passenger luxury adult female
+trainEx10	died     crew regular adult male
+trainEx11	survived passenger regular child male
+trainEx12	died     crew regular adult male
+trainEx13	survived passenger luxury adult male
+trainEx14	died     passenger regular adult male
+trainEx15	survived passenger luxury adult female
+trainEx16	died     crew regular adult male
+trainEx17	died     passenger regular adult male
+trainEx18	died     passenger regular adult male
+trainEx19	survived passenger regular child male
+trainEx20	survived passenger luxury adult female
+trainEx21	survived crew regular adult male
+trainEx22	died     crew regular adult male
+trainEx23	survived passenger luxury adult female
+trainEx24	survived passenger luxury adult female
+trainEx25	died     passenger regular adult male
+trainEx26	died     passenger luxury adult male
+trainEx27	died     crew regular adult male
+trainEx28	survived passenger regular adult female
+trainEx29	died     passenger regular adult male
+trainEx30	survived crew regular adult male
+trainEx31	died     passenger regular adult male
+trainEx32	survived crew regular adult male
+trainEx33	died     passenger regular adult female
+trainEx34	survived passenger regular child female
+trainEx35	died     passenger regular adult male
+trainEx36	died     passenger regular child male
+trainEx37	survived passenger regular child male
+trainEx38	died     passenger regular adult male
+trainEx39	died     crew regular adult male
+trainEx40	died     passenger regular adult male
+trainEx41	died     crew regular adult male
+trainEx42	survived passenger regular adult female
+trainEx43	died     passenger regular adult male
+trainEx44	died     passenger regular adult female
+trainEx45	died     crew regular adult male
+trainEx46	died     crew regular adult male
+trainEx47	died     passenger regular adult male
+trainEx48	died     passenger luxury adult male
+trainEx49	survived crew regular adult male
+trainEx50	died     crew regular adult male
+trainEx51	died     passenger regular adult female
+trainEx52	died     crew regular adult male
+trainEx53	died     passenger regular adult male
+trainEx54	survived passenger luxury adult male
+trainEx55	died     crew regular adult male
+trainEx56	died     crew regular adult male
+trainEx57	survived crew regular adult female
+trainEx58	died     passenger regular adult male
+trainEx59	died     crew regular adult male
+trainEx60	survived passenger luxury adult female
+trainEx61	died     passenger regular adult female
+trainEx62	survived crew regular adult male
+trainEx63	died     passenger regular adult male
+trainEx64	died     crew regular adult male
+trainEx65	survived passenger regular adult female
+trainEx66	died     crew regular adult male
+trainEx67	died     crew regular adult male
+trainEx68	died     crew regular adult male
+trainEx69	survived crew regular adult male
+trainEx70	died     crew regular adult male
+trainEx71	died     passenger regular adult male
+trainEx72	died     crew regular adult male
+trainEx73	died     crew regular adult male
+trainEx74	survived crew regular adult male
+trainEx75	died     crew regular adult male
+trainEx76	survived passenger luxury adult female
+trainEx77	died     crew regular adult male
+trainEx78	survived passenger regular adult female
+trainEx79	died     passenger luxury adult male
+trainEx80	survived passenger luxury adult female
+trainEx81	died     passenger regular adult male
+trainEx82	died     crew regular adult male
+trainEx83	died     passenger regular adult male
+trainEx84	died     passenger regular adult female
+trainEx85	survived passenger luxury adult female
+trainEx86	died     crew regular adult male
+trainEx87	died     passenger regular adult female
+trainEx88	died     crew regular adult male
+trainEx89	died     passenger regular adult female
+trainEx90	survived passenger regular adult female
+trainEx91	died     crew regular adult male
+trainEx92	survived crew regular adult male
+trainEx93	died     crew regular adult male
+trainEx94	survived passenger regular adult female
+trainEx95	survived crew regular adult male
+trainEx96	died     crew regular adult male
+trainEx97	died     crew regular adult male
+trainEx98	died     crew regular adult male
+trainEx99	survived passenger luxury adult female
+trainEx100	died     passenger luxury adult male
+trainEx101	survived passenger regular child female
+trainEx102	died     crew regular adult male
+trainEx103	died     crew regular adult male
+trainEx104	survived passenger regular adult male
+trainEx105	died     passenger regular adult male
+trainEx106	survived passenger regular child male
+trainEx107	died     passenger luxury adult male
+trainEx108	died     crew regular adult male
+trainEx109	died     crew regular adult male
+trainEx110	survived passenger regular adult female
+trainEx111	died     passenger regular adult male
+trainEx112	survived passenger luxury child male
+trainEx113	died     passenger regular adult male
+trainEx114	survived crew regular adult male
+trainEx115	survived passenger luxury adult female
+trainEx116	died     crew regular adult male
+trainEx117	died     passenger luxury adult male
+trainEx118	survived crew regular adult female
+trainEx119	survived passenger regular adult female
+trainEx120	died     crew regular adult male

@@ -1,0 +1,156 @@
+// The structure of a dataset will be as described below.
+// (we're using a very restricted design for simplicity).
+
+// NOTE: Your code should handle both Windows-formatted and Linux-formatted files
+// (which, unfortunately, differ in how the end of line is represented).
+
+// The class labels (we assume, for simplicity, that only TWO values are possible).
+// Whether or not the person in question died on the Titanic
+survived
+died
+
+// The number of features:
+4
+
+// The names of the features (attributes describing the person aboard the
+// Titanic when it sank):
+type passenger crew
+accomodations regular luxury
+age adult child
+gender male female
+
+// The number of examples (will read this many in; ok to have more in the file)
+120
+
+// The examples (we assume, for simplicity, that all features are BOOLEAN-VALUED)
+//   First is the example's name, then its category, finally followed
+//   by the values of all of its features (listed in the order of the
+//   feature names above, will be separated by "whitespace"). 
+//   The (boring) names are simply used to concisely identify the examples.
+//   Your decision-tree learner should NOT use these names as a feature (what would happen if you did?).
+
+
+// You may assume that the feature values specified above are the only feature values that will appear.  
+// Ie, no need for error checking (but OK to do so).
+
+
+testEx1		survived passenger regular child female
+testEx2		died     crew regular adult male
+testEx3		died     passenger luxury adult male
+testEx4		survived passenger luxury adult male
+testEx5		died     passenger regular adult female
+testEx6		died     passenger luxury adult male
+testEx7		survived crew regular adult male
+testEx8		died     passenger regular adult male
+testEx9		survived passenger luxury child male
+testEx10	died     passenger regular adult male
+testEx11	died     passenger regular adult male
+testEx12	survived passenger luxury adult female
+testEx13	died     crew regular adult male
+testEx14	died     crew regular adult male
+testEx15	survived passenger regular adult male
+testEx16	died     passenger regular adult female
+testEx17	died     crew regular adult male
+testEx18	survived crew regular adult male
+testEx19	died     crew regular adult male
+testEx20	died     crew regular adult male
+testEx21	survived passenger regular child female
+testEx22	died     passenger regular adult male
+testEx23	died     crew regular adult male
+testEx24	survived passenger regular adult male
+testEx25	died     passenger regular adult male
+testEx26	died     crew regular adult male
+testEx27	died     passenger regular adult male
+testEx28	survived passenger luxury adult female
+testEx29	died     crew regular adult male
+testEx30	died     crew regular adult male
+testEx31	survived crew regular adult male
+testEx32	died     crew regular adult male
+testEx33	died     passenger regular adult female
+testEx34	survived passenger regular adult female
+testEx35	died     passenger regular adult male
+testEx36	died     passenger regular adult male
+testEx37	survived crew regular adult male
+testEx38	died     passenger regular adult male
+testEx39	died     passenger regular adult male
+testEx40	survived crew regular adult male
+testEx41	died     passenger luxury adult male
+testEx42	died     passenger regular adult male
+testEx43	died     crew regular adult male
+testEx44	survived crew regular adult male
+testEx45	died     crew regular adult male
+testEx46	died     passenger regular adult male
+testEx47	survived passenger regular adult female
+testEx48	died     passenger regular adult male
+testEx49	died     passenger regular adult male
+testEx50	survived crew regular adult male
+testEx51	died     passenger regular adult male
+testEx52	died     crew regular adult male
+testEx53	died     crew regular adult male
+testEx54	died     crew regular adult male
+testEx55	survived passenger luxury adult male
+testEx56	died     crew regular adult male
+testEx57	died     crew regular adult male
+testEx58	survived passenger luxury adult female
+testEx59	died     crew regular adult male
+testEx60	died     passenger regular adult male
+testEx61	survived passenger luxury adult male
+testEx62	died     crew regular adult male
+testEx63	survived passenger luxury adult female
+testEx64	died     passenger regular adult male
+testEx65	died     passenger luxury adult male
+testEx66	survived crew regular adult male
+testEx67	died     crew regular adult male
+testEx68	survived crew regular adult male
+testEx69	died     crew regular adult male
+testEx70	survived passenger regular child male
+testEx71	survived passenger luxury adult female
+testEx72	died     passenger regular adult male
+testEx73	survived passenger luxury adult male
+testEx74	survived passenger luxury adult female
+testEx75	died     crew regular adult male
+testEx76	died     passenger luxury adult male
+testEx77	survived passenger regular child female
+testEx78	died     passenger regular adult male
+testEx79	died     passenger regular adult male
+testEx80	survived crew regular adult male
+testEx81	died     crew regular adult male
+testEx82	died     passenger regular adult male
+testEx83	survived passenger luxury adult female
+testEx84	died     passenger regular adult female
+testEx85	died     crew regular adult male
+testEx86	survived passenger luxury adult female
+testEx87	died     crew regular adult male
+testEx88	survived passenger regular adult male
+testEx89	died     passenger regular adult female
+testEx90	died     passenger regular child male
+testEx91	survived passenger regular adult male
+testEx92	died     passenger regular adult male
+testEx93	died     crew regular adult male
+testEx94	survived passenger luxury adult female
+testEx95	died     crew regular adult male
+testEx96	died     passenger regular adult male
+testEx97	died     crew regular adult male
+testEx98	died     crew regular adult male
+testEx99	survived passenger regular child male
+testEx100	died     crew regular adult male
+testEx101	died     passenger regular adult male
+testEx102	survived passenger regular child female
+testEx103	died     crew regular adult male
+testEx104	died     passenger regular child male
+testEx105	survived passenger luxury adult female
+testEx106	died     crew regular adult male
+testEx107	survived crew regular adult male
+testEx108	died     crew regular adult male
+testEx109	survived passenger regular adult male
+testEx110	survived crew regular adult male
+testEx111	died     crew regular adult male
+testEx112	survived passenger luxury adult male
+testEx113	died     crew regular adult male
+testEx114	died     passenger regular adult male
+testEx115	survived passenger regular adult female
+testEx116	died     crew regular adult male
+testEx117	survived passenger regular adult female
+testEx118	survived crew regular adult male
+testEx119	died     passenger regular adult male
+testEx120	survived passenger regular child female
